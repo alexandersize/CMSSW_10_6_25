@@ -2,7 +2,7 @@
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: Configuration/GenProduction/python/SUS-RunIISummer20UL18wmLHEGEN-00073-fragment.py --python_filename SUS-RunIISummer20UL18wmLHEGEN-00073_1_cfg.py --eventcontent RAWSIM,LHE --customise Configuration/DataProcessing/Utils.addMonitoring --datatier GEN,LHE --fileout file:SUS-RunIISummer20UL18wmLHEGEN-00073.root --conditions 106X_upgrade2018_realistic_v4 --beamspot Realistic25ns13TeVEarly2018Collision --step LHE,GEN --geometry DB:Extended --era Run2_2018 --mc -n 5000
+# with command line options: Configuration/GenProduction/python/SUS-RunIISummer20UL18wmLHEGEN-00073-fragment.py --python_filename SUS-RunIISummer20UL18wmLHEGEN-00073_1_cfg.py --eventcontent RAWSIM,LHE --customise Configuration/DataProcessing/Utils.addMonitoring --datatier GEN,LHE --fileout file:modified-slha-gluino-E-12.root --conditions 106X_upgrade2018_realistic_v4 --beamspot Realistic25ns13TeVEarly2018Collision --step LHE,GEN --geometry DB:Extended --era Run2_2018 --no_exec --mc -n 5000
 import FWCore.ParameterSet.Config as cms
 
 from Configuration.Eras.Era_Run2_2018_cff import Run2_2018
@@ -54,7 +54,7 @@ process.RAWSIMoutput = cms.OutputModule("PoolOutputModule",
         filterName = cms.untracked.string('')
     ),
     eventAutoFlushCompressedSize = cms.untracked.int32(20971520),
-    fileName = cms.untracked.string('file:SUS-RunIISummer20UL18wmLHEGEN-00073.root'),
+    fileName = cms.untracked.string('file:modified-slha-gluino-E-12.root'),
     outputCommands = process.RAWSIMEventContent.outputCommands,
     splitLevel = cms.untracked.int32(0)
 )
@@ -64,7 +64,7 @@ process.LHEoutput = cms.OutputModule("PoolOutputModule",
         dataTier = cms.untracked.string('LHE'),
         filterName = cms.untracked.string('')
     ),
-    fileName = cms.untracked.string('file:SUS-RunIISummer20UL18wmLHEGEN-00073_inLHE.root'),
+    fileName = cms.untracked.string('file:modified-slha-gluino-E-12_inLHE.root'),
     outputCommands = process.LHEEventContent.outputCommands,
     splitLevel = cms.untracked.int32(0)
 )
@@ -180,7 +180,7 @@ process.generator = cms.EDFilter("Pythia8HadronizerFilter",
 
 
 process.externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
-    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/sus_sms/SMS-GlGl/SMS-GlGl_mGl-1500_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    args = cms.vstring('/afs/cern.ch/user/m/masizemo/hscp/GENrecipie/CMSSW_10_6_25/modified-GlGl_mGl-1500_tarball.tar.xz'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
