@@ -1,0 +1,2 @@
+src/Configuration/GenProduction/python/__*
+src/Configuration/GenProduction/python/*.pyc
