@@ -1,0 +1,6 @@
+1       b b > go go b b
+mirror  none
+2       b b~ > go go b b~
+mirror  b~ b > go go b b~
+3       b~ b~ > go go b~ b~
+mirror  none
