@@ -22,66 +22,6 @@ externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
 
 import math
 
-baseSLHATable="""
-BLOCK MASS
-   2000001     1.00000000E+05
-   2000002     1.00000000E+05
-   2000003     1.00000000E+05
-   2000004     1.00000000E+05
-   2000005     1.00000000E+05
-   2000006     1.00000000E+05
-   2000011     1.00000000E+05
-   2000013     1.00000000E+05
-   2000015     1.00000000E+05
-   1000001     1.00000000E+05
-   1000002     1.00000000E+05
-   1000003     1.00000000E+05
-   1000004     1.00000000E+05
-   1000005     1.00000000E+05
-   1000006     1.00000000E+05
-   1000011     1.00000000E+05
-   1000012     1.00000000E+05
-   1000013     1.00000000E+05
-   1000014     1.00000000E+05
-   1000015     1.00000000E+05
-   1000016     1.00000000E+05
-   1000021     1500
-   1000022     1.00000000E+00
-   1000023     750
-   1000024     750
-   1000025     1.00000000E+05
-   1000035     1.00000000E+05
-   1000037     1.00000000E+05
-#
-DECAY   2000001     0.00000000E+00
-DECAY   2000002     0.00000000E+00
-DECAY   2000003     0.00000000E+00
-DECAY   2000004     0.00000000E+00
-DECAY   2000005     0.00000000E+00
-DECAY   2000006     0.00000000E+00
-DECAY   2000011     0.00000000E+00
-DECAY   2000013     0.00000000E+00
-DECAY   2000015     0.00000000E+00
-DECAY   1000001     0.00000000E+00
-DECAY   1000002     0.00000000E+00
-DECAY   1000003     0.00000000E+00
-DECAY   1000004     0.00000000E+00
-DECAY   1000005     0.00000000E+00
-DECAY   1000006     0.00000000E+00
-DECAY   1000011     0.00000000E+00
-DECAY   1000012     0.00000000E+00
-DECAY   1000013     0.00000000E+00
-DECAY   1000014     0.00000000E+00
-DECAY   1000015     0.00000000E+00
-DECAY   1000016     0.00000000E+00
-
-DECAY   1000021     1.00000000E-12
-DECAY   1000023     0.00000000E+00
-DECAY   1000024     0.00000000E+00
-DECAY   1000022     0.00000000E+00
-"""
-
-
 generator = cms.EDFilter("Pythia8HadronizerFilter",
   maxEventsToPrint = cms.untracked.int32(1),
   pythiaPylistVerbosity = cms.untracked.int32(1),
@@ -119,16 +59,16 @@ generator = cms.EDFilter("Pythia8HadronizerFilter",
       'processParameters'
     )
   ),
-  SLHATableForPythia8 = cms.string(baseSLHATable),
+ # SLHATableForPythia8 = cms.string(baseSLHATable),
 )
 
-generator.hscpFlavor = cms.untracked.string(FLAVOR)
-generator.massPoint = cms.untracked.int32(MASS_POINT)
-generator.particleFile = cms.untracked.string(PARTICLE_FILE)
-generator.slhaFile = cms.untracked.string(SLHA_FILE)
-generator.processFile = cms.untracked.string(PROCESS_FILE)
-generator.pdtFile = cms.FileInPath(PDT_FILE)
-generator.useregge = cms.bool(USE_REGGE)
+#generator.hscpFlavor = cms.untracked.string(FLAVOR)
+#generator.massPoint = cms.untracked.int32(MASS_POINT)
+#generator.particleFile = cms.untracked.string(PARTICLE_FILE)
+#generator.slhaFile = cms.untracked.string(SLHA_FILE)
+#generator.processFile = cms.untracked.string(PROCESS_FILE)
+#generator.pdtFile = cms.FileInPath(PDT_FILE)
+#generator.useregge = cms.bool(USE_REGGE)
 
 #We would like to change the particleID lists to be more inclusive of all RHadrons.
 dirhadrongenfilter = cms.EDFilter("MCParticlePairFilter",

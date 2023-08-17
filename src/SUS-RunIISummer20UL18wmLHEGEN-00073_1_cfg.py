@@ -163,19 +163,11 @@ process.generator = cms.EDFilter("Pythia8HadronizerFilter",
             'ParticleDecays:allowPhotonRadiation = on'
         )
     ),
-    SLHATableForPythia8 = cms.string('\nBLOCK MASS\n   2000001     1.00000000E+05\n   2000002     1.00000000E+05\n   2000003     1.00000000E+05\n   2000004     1.00000000E+05\n   2000005     1.00000000E+05\n   2000006     1.00000000E+05\n   2000011     1.00000000E+05\n   2000013     1.00000000E+05\n   2000015     1.00000000E+05\n   1000001     1.00000000E+05\n   1000002     1.00000000E+05\n   1000003     1.00000000E+05\n   1000004     1.00000000E+05\n   1000005     1.00000000E+05\n   1000006     1.00000000E+05\n   1000011     1.00000000E+05\n   1000012     1.00000000E+05\n   1000013     1.00000000E+05\n   1000014     1.00000000E+05\n   1000015     1.00000000E+05\n   1000016     1.00000000E+05\n   1000021     1500\n   1000022     1.00000000E+00\n   1000023     750\n   1000024     750\n   1000025     1.00000000E+05\n   1000035     1.00000000E+05\n   1000037     1.00000000E+05\n#\nDECAY   2000001     0.00000000E+00\nDECAY   2000002     0.00000000E+00\nDECAY   2000003     0.00000000E+00\nDECAY   2000004     0.00000000E+00\nDECAY   2000005     0.00000000E+00\nDECAY   2000006     0.00000000E+00\nDECAY   2000011     0.00000000E+00\nDECAY   2000013     0.00000000E+00\nDECAY   2000015     0.00000000E+00\nDECAY   1000001     0.00000000E+00\nDECAY   1000002     0.00000000E+00\nDECAY   1000003     0.00000000E+00\nDECAY   1000004     0.00000000E+00\nDECAY   1000005     0.00000000E+00\nDECAY   1000006     0.00000000E+00\nDECAY   1000011     0.00000000E+00\nDECAY   1000012     0.00000000E+00\nDECAY   1000013     0.00000000E+00\nDECAY   1000014     0.00000000E+00\nDECAY   1000015     0.00000000E+00\nDECAY   1000016     0.00000000E+00\n\nDECAY   1000021     1.00000000E-12\nDECAY   1000023     0.00000000E+00\nDECAY   1000024     0.00000000E+00\nDECAY   1000022     0.00000000E+00\n'),
     comEnergy = cms.double(13000.0),
     filterEfficiency = cms.untracked.double(1.0),
-    hscpFlavor = cms.untracked.string('gluino'),
-    massPoint = cms.untracked.int32(1800),
     maxEventsToPrint = cms.untracked.int32(1),
-    particleFile = cms.untracked.string('Configuration/Generator/data/particles_gluino_1800_GeV.txt'),
-    pdtFile = cms.FileInPath('Configuration/Generator/data/hscppythiapdtgluino1800.tbl'),
-    processFile = cms.untracked.string('SimG4Core/CustomPhysics/data/RhadronProcessList.txt'),
     pythiaHepMCVerbosity = cms.untracked.bool(False),
-    pythiaPylistVerbosity = cms.untracked.int32(1),
-    slhaFile = cms.untracked.string('Configuration/Generator/data/HSCP_gluino_1800_SLHA.spc'),
-    useregge = cms.bool(False)
+    pythiaPylistVerbosity = cms.untracked.int32(1)
 )
 
 
