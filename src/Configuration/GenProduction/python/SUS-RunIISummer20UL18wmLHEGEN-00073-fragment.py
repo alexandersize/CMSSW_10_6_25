@@ -13,7 +13,7 @@ from Configuration.Generator.Pythia8CommonSettings_cfi import *
 from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *  
 
 externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
-    args = cms.vstring("/afs/cern.ch/user/m/masizemo/hscp/GENrecipie/CMSSW_10_6_25/modified-GlGl_mGl-1500_tarball.tar.xz"),
+    args = cms.vstring("/afs/cern.ch/user/m/masizemo/hscp/GENrecipie/CMSSW_10_6_25/modified-GlGl_mGl-1800_tarball.tar.xz"),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),

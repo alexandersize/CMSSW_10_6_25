@@ -2,7 +2,7 @@
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: Configuration/GenProduction/python/SUS-RunIISummer20UL18wmLHEGEN-00073-fragment.py --python_filename SUS-RunIISummer20UL18wmLHEGEN-00073_1_cfg.py --eventcontent RAWSIM,LHE --customise Configuration/DataProcessing/Utils.addMonitoring --datatier GEN,LHE --fileout file:modified-slha-gluino-E-12.root --conditions 106X_upgrade2018_realistic_v4 --beamspot Realistic25ns13TeVEarly2018Collision --step LHE,GEN --geometry DB:Extended --era Run2_2018 --mc -n 100
+# with command line options: Configuration/GenProduction/python/SUS-RunIISummer20UL18wmLHEGEN-00073-fragment.py --python_filename SUS-RunIISummer20UL18wmLHEGEN-00073_1_cfg.py --eventcontent RAWSIM,LHE --customise Configuration/DataProcessing/Utils.addMonitoring --datatier GEN,LHE --fileout file:modified-slha-gluino-E-12.root --conditions 106X_upgrade2018_realistic_v4 --beamspot Realistic25ns13TeVEarly2018Collision --step LHE,GEN --geometry DB:Extended --era Run2_2018 --mc --no_exec -n 100
 import FWCore.ParameterSet.Config as cms
 
 from Configuration.Eras.Era_Run2_2018_cff import Run2_2018
@@ -172,7 +172,7 @@ process.generator = cms.EDFilter("Pythia8HadronizerFilter",
 
 
 process.externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
-    args = cms.vstring('/afs/cern.ch/user/m/masizemo/hscp/GENrecipie/CMSSW_10_6_25/modified-GlGl_mGl-1500_tarball.tar.xz'),
+    args = cms.vstring('/afs/cern.ch/user/m/masizemo/hscp/GENrecipie/CMSSW_10_6_25/modified-GlGl_mGl-1800_tarball.tar.xz'),
     nEvents = cms.untracked.uint32(100),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
