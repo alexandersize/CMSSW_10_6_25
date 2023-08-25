@@ -1,0 +1,16 @@
+1       g u > go go g u
+mirror  u g > go go g u
+2       g c > go go g c
+mirror  c g > go go g c
+3       g d > go go g d
+mirror  d g > go go g d
+4       g s > go go g s
+mirror  s g > go go g s
+5       g u~ > go go g u~
+mirror  u~ g > go go g u~
+6       g c~ > go go g c~
+mirror  c~ g > go go g c~
+7       g d~ > go go g d~
+mirror  d~ g > go go g d~
+8       g s~ > go go g s~
+mirror  s~ g > go go g s~

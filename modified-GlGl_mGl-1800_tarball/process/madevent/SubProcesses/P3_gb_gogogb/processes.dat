@@ -1,0 +1,4 @@
+1       g b > go go g b
+mirror  b g > go go g b
+2       g b~ > go go g b~
+mirror  b~ g > go go g b~
