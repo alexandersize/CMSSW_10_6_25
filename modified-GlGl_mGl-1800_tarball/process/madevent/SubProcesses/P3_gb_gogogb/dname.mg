@@ -1,1 +1,0 @@
-DIRNAME=P3_gb_gogogb
